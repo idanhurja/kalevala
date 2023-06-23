@@ -9,12 +9,12 @@ type: joo
 
 modules:
 
-  - id: first_test
-    name: first_test
+  - id: firsttest
+    name: firsttest
     description: The first tests module.
 
     challenges:
 
-      - id: quess_number
-        name: quess_number
+      - id: quessnumber
+        name: quessnumber
         description: Quess a number

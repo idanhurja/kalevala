@@ -2,41 +2,19 @@ id: kalevala
 
 name: Kalevala
 
-description: |
-  Idanhurja testing thing here
+description:
+  Idanhurja testing things here
 
 type: joo
 
 modules:
 
-  - id: hello
-    name: Hello
-    description: The first module in this example dojo.
+  - id: first_test
+    name: first_test
+    description: The first tests module.
 
     challenges:
 
-      - id: apple
-        name: Apple
-        description: This is apple.
-
-      - id: banana
-        name: Banana
-        description: This is banana.
-
-  - id: world
-    name: World
-    description: The second module in this example dojo.
-
-    challenges:
-
-      - id: earth
-        name: Earth
-        description: This is earth.
-
-      - id: mars
-        name: Mars
-        description: This is mars.
-
-      - id: venus
-        name: Venus
-        description: This is venus.
+      - id: quess_number
+        name: quess_number
+        description: Quess a number
