@@ -10,11 +10,11 @@ type: joo
 modules:
 
   - id: first_test
-    name: First
+    name: first_test
     description: The first tests module.
 
     challenges:
 
       - id: quess_number
-        name: QuessNumber
+        name: quess_number
         description: Quess a number
