@@ -1,12 +1,11 @@
-id: example
+id: kalevala
 
 name: Kalevala
 
 description: |
-  This is an [example dojo](https://github.com/pwncollege/example-dojo).
-  Fork this repository, and create your own dojo!
+  Idanhurja testing thing here
 
-type: example
+type: joo
 
 modules:
 
