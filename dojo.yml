@@ -9,12 +9,16 @@ type: joo
 
 modules:
 
-  - id: firsttest
-    name: firsttest
-    description: The first tests module.
+  - id: reverse
+    name: reverse
+    description: reverse engineering challenges
 
     challenges:
 
       - id: quessnumber
         name: quessnumber
         description: Quess a number
+
+      - id: idan23
+        name: idan23
+        description: Simply interpreter designed using chatgpt
