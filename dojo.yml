@@ -22,3 +22,7 @@ modules:
       - id: idan23
         name: idan23
         description: Simply interpreter designed using chatgpt
+
+      - id: quessnumber2
+        name: quessnumber2
+        description: Quess number again
