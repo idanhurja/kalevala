@@ -19,7 +19,7 @@ modules:
 
       - id: quessnumber
         name: quessnumber
-        description: I made for my 13 year old son, when he wanted to test his hacking skills. There are at least three different ways to play with this simply challenge - scripting (brute force), - reverse engineering by Ida/similar and - GDB (Linux debugger). Maybe this was not the best introduction challenge for my son, because he lost his interest in hacking after playing with this one 🙂
+        description: I made this challenge for my 13 year old son, when he wanted to test his hacking skills. There are at least three different ways to play with this simply challenge - scripting (brute force), - reverse engineering by Ida/similar and - GDB (Linux debugger). Maybe this was not the best introduction challenge for my son, because he lost his interest in hacking after playing with this one 🙂
 
       - id: idan23
         name: idan23
