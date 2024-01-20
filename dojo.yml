@@ -6,7 +6,8 @@ description:
   Idanhurja testing things here
 
 type: joo
-
+award:
+  emoji: 😀
 modules:
 
   - id: reverse
