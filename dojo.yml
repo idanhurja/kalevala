@@ -7,7 +7,7 @@ description:
   
 type: joo
 award:
-  emoji: 😀
+  emoji: ! "\U0001F428"
 modules:
 
   - id: reverse
