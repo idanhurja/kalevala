@@ -5,7 +5,7 @@ name: Kalevala
 description: |
   This is a Dojo that a random internet hacker (Idanhurja) did. Idanhurja is made in Finland, the dojo name "Kalevala" is originated in old Finnish mythology.
   
-type: joo
+type: public
 award:
   emoji: ! "\U0001F428"
 modules:
