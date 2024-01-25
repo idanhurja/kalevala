@@ -29,18 +29,6 @@ modules:
         name: guessnumber2
         description: a bit more complicated variant of the first one. Still need to enter a correct number but now its not a fixed one, and processing of an user given number seems to take almost as long as delivery of pwn.college belts 🙂
 
-      - id: idan23_01
-        name: idan23_01
-        description: In this challenge you have an opportunity to play with Idan23-interpreted language.
-
-      - id: idan23_02
-        name: idan23_02
-        description: In this challenge you have an opportunity to play with Idan23-interpreted language. Why interpreter should not print detected unknown commands..
-
-      - id: idan23_03
-        name: idan23_03
-        description: In this challenge you have an opportunity to play with Idan23-interpreted language. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
-
       - id: idan23
         name: idan23
         description: In this challenge you have an opportunity to play with Idan23-interpreted language. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
