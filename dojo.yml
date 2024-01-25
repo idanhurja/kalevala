@@ -18,7 +18,7 @@ modules:
     challenges:
 
       - id: guessnumber
-        name: guessnumber
+        name: guessnumber-01
         description: |
           I made this challenge for my 13 year old son, when he wanted to test his hacking skills. Maybe this was not the best introduction challenge for my son, because he lost his interest in hacking after playing with this one 🙂 There are at least three different ways to play with this simply challenge 
           - scripting (brute force), 
@@ -30,7 +30,7 @@ modules:
         description: Challenge will print the flag. The processing time of flag printing seems to be longish.
 
       - id: guessnumber2
-        name: guessnumber2
+        name: guessnumber-02
         description: a bit more complicated variant of the first one. Still need to enter a correct number but now its not a fixed one, and processing of an user given number seems to take almost as long as delivery of pwn.college belts 🙂
       
       - id: idan23-01
