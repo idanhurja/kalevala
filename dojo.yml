@@ -33,8 +33,8 @@ modules:
         name: guessnumber2
         description: a bit more complicated variant of the first one. Still need to enter a correct number but now its not a fixed one, and processing of an user given number seems to take almost as long as delivery of pwn.college belts 🙂
       
-      - id: idan2301
-        name: idan2301
+      - id: idan23-01
+        name: idan23.01
         description: In this challenge you have an opportunity to familiarize yourself with a brand new Idan23-interpreted language. Idan23 market introduction is following the trend that things tend to get released before the whole functionality is available.
 
       - id: idan2302
