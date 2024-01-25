@@ -31,16 +31,16 @@ modules:
       
       - id: idan2301
         name: idan2301
-        description: In this challenge you have an opportunity to play with Idan23-interpreted language.
+        description: In this challenge you have an opportunity to familiarize yourself with a brand new Idan23-interpreted language. Idan23 market introduction is following the trend that things tend to get released before the whole functionality is available.
 
       - id: idan2302
         name: idan2302
-        description: In this challenge you have an opportunity to play with Idan23-interpreted language. Why interpreter should not print detected unknown commands..
+        description: Idan23-interpreted language fun. Why interpreter should not print detected unknown commands..
 
       - id: idan2303
         name: idan2303
-        description: In this challenge you have an opportunity to play with Idan23-interpreted language. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
+        description: Even more Idan23-interpreted language fun. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
         
       - id: idan23
         name: idan23
-        description: In this challenge you have an opportunity to play with Idan23-interpreted language. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
+        description: The Idan23-interpreted language boss challenge. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all.
