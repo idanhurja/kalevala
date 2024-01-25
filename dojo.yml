@@ -35,7 +35,7 @@ modules:
 
       - id: idan2302
         name: idan2302
-        description: Idan23-interpreted language fun. Why interpreter should not print detected unknown commands..
+        description: Idan23-interpreted language fun. Why interpreter should not print detected unknown commands.. This was used as an unintended solution for Idan23 boss challenge. Now its offered as a separate challenge.
 
       - id: idan2303
         name: idan2303
