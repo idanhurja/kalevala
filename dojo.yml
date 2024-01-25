@@ -32,6 +32,14 @@ modules:
       - id: idan2301
         name: idan2301
         description: In this challenge you have an opportunity to play with Idan23-interpreted language.
+
+      - id: idan2302
+        name: idan2302
+        description: In this challenge you have an opportunity to play with Idan23-interpreted language. Why interpreter should not print detected unknown commands..
+
+        - id: idan2303
+        name: idan2303
+        description: In this challenge you have an opportunity to play with Idan23-interpreted language. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
         
       - id: idan23
         name: idan23
