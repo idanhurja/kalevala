@@ -27,7 +27,7 @@ modules:
           - reverse engineering by Ida/similar and 
           - GDB (Linux debugger)
 
-      - id: idan23
+      - id: idan23_04
         name: idan23_04
         description: In this challenge you have an opportunity to play with Idan23-interpreted language. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
 
