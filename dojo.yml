@@ -25,6 +25,10 @@ modules:
           - reverse engineering by Ida/similar and 
           - GDB (Linux debugger)
 
+      - id: delayedflag
+        name: delayedflag
+        description: Challenge will print the flag. The processing time of flag printing seems to be longish.
+
       - id: guessnumber2
         name: guessnumber2
         description: a bit more complicated variant of the first one. Still need to enter a correct number but now its not a fixed one, and processing of an user given number seems to take almost as long as delivery of pwn.college belts 🙂
