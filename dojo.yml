@@ -18,7 +18,7 @@ modules:
     challenges:
 
       - id: guessnumber
-        name: guessnumber-01
+        name: guessnumber.01
         description: |
           I made this challenge for my 13 year old son, when he wanted to test his hacking skills. Maybe this was not the best introduction challenge for my son, because he lost his interest in hacking after playing with this one 🙂 There are at least three different ways to play with this simply challenge 
           - scripting (brute force), 
@@ -30,18 +30,18 @@ modules:
         description: Challenge will print the flag. The processing time of flag printing seems to be longish.
 
       - id: guessnumber2
-        name: guessnumber-02
+        name: guessnumber.02
         description: a bit more complicated variant of the first one. Still need to enter a correct number but now its not a fixed one, and processing of an user given number seems to take almost as long as delivery of pwn.college belts 🙂
       
-      - id: idan23-01
+      - id: idan2301
         name: idan23.01
         description: In this challenge you have an opportunity to familiarize yourself with a brand new Idan23-interpreted language. Idan23 market introduction is following the trend that things tend to get released before the whole functionality is available.
 
-      - id: idan23-02
+      - id: idan2302
         name: idan23.02
         description: Idan23-interpreted language fun. Why interpreter should not print detected unknown commands.. This was used as an unintended solution for Idan23 boss challenge. Now its offered as a separate challenge.
 
-      - id: idan23-03
+      - id: idan2303
         name: idan23.03
         description: Even more Idan23-interpreted language fun. To guarantee superior hacker experience, corrupted Idan23-program files are not executed.
         
