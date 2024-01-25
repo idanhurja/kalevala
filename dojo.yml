@@ -26,7 +26,7 @@ modules:
           - GDB (Linux debugger)
 
       - id: delayedflag
-        name: delayedflag
+        name: delayed-flag
         description: Challenge will print the flag. The processing time of flag printing seems to be longish.
 
       - id: guessnumber2
