@@ -48,3 +48,15 @@ modules:
       - id: idan23
         name: idan23.04
         description: The Idan23-interpreted language boss challenge. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all.
+
+  - id: kernel
+    name: kernel
+    description: Basic kernel things
+
+    challenges:
+
+      - id: level01
+        name: level.01
+        description: make a kernel mode to access the flag
+
+
