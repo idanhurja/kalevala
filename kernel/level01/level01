@@ -1,5 +1,5 @@
 #!/opt/pwn.college/bash
 
-insmod ./print_flag.ko
+insmod ./flag.ko
 
 echo "Goodbye!"
