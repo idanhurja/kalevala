@@ -57,6 +57,6 @@ modules:
 
       - id: level01
         name: level.01
-        description: make a kernel mode to access the flag
+        description: make a kernel module to access the flag
 
 
