@@ -1,0 +1,5 @@
+#!/usr/bin/bash
+
+insmod ./print_flag.ko
+
+echo "Goodbye!"
