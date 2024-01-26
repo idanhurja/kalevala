@@ -1,4 +1,4 @@
-#!/usr/bin/bash
+#!/opt/pwn.college/bash
 
 insmod ./print_flag.ko
 
