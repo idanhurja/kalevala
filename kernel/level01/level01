@@ -2,6 +2,8 @@
 
 PATH=/usr/sbin
 
-insmod ./flag.ko
-
+echo "trying to do: insmod ./kalevala"
+insmod ./kalevala.ko
+echo "trying to do: rmmod kalevala"
+rmmod kalevala
 echo "Goodbye!"
