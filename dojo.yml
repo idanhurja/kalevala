@@ -7,7 +7,7 @@ description: |
   
 type: public
 award:
-  emoji: ! "\U000FE1C1"
+  emoji: ! "\U0001F428"
 modules:
 
   - id: reverse
