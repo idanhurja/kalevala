@@ -59,4 +59,6 @@ modules:
         name: level.01
         description: make a kernel module to access the flag
 
-
+      - id: level02
+        name: level.02
+        description: make a kernel module to communicate with the challenge binary toget the flag
