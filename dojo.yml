@@ -62,3 +62,7 @@ modules:
       - id: level02
         name: level.02
         description: make a kernel module to communicate with the challenge binary to get the flag
+
+      - id: level03
+        name: level.03
+        description: make a kernel module that hides files/folder in directory '/' to get the flag
