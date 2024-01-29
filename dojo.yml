@@ -65,4 +65,4 @@ modules:
 
       - id: level03
         name: level.03
-        description: make a kernel module that hides files/folder in directory '/' to get the flag
+        description: make a kernel module that hides files/folders in directory '/' to get the flag
