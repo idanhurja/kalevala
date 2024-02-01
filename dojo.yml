@@ -66,3 +66,7 @@ modules:
       - id: level03
         name: level.03
         description: make a kernel module that hides files/folders in directory '/' from command 'ls /' to get the flag
+
+      - id: level04
+        name: level.04
+        description: make a kernel module that hides files/folders in directory '/' from command 'ls /' to get the flag. kaslr on.
