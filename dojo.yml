@@ -73,4 +73,4 @@ modules:
 
       - id: level05
         name: level.05
-        description: Identical to level 5, except new concept introduced for the tester program.       
+        description: Identical to level.04, except new concept introduced for the tester program.       
