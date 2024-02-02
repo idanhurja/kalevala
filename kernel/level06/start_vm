@@ -1,0 +1,5 @@
+#!/opt/pwn.college/bash
+
+echo "trying to do: start vm"
+sudo vm start
+

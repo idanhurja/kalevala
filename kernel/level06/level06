@@ -1,0 +1,45 @@
+#!/opt/pwn.college/python
+
+import pwn
+import os
+from pwn import *
+
+pwn.context.arch = "amd64"
+pwn.context.encoding = "ascii"
+
+print ("This is a tester program that will check that the .ko module you provided is performing as expected.")
+print ("If all test cases are passed, the flag will be printed. Flag may be accidentially printed also in case of some bug in this tester program.")
+print ("It is expected that the .ko module is named as kalevala.ko and it is located in the directory /home/hacker")
+print ("Tester program is slowish, some delay is added between each step to quarantee more realiable behaviour.")
+
+fp_flag = open("/flag", "r")
+flag = fp_flag.read(100)
+fp_flag.close()
+
+fp_flag = open("/flag", "w")
+fp_flag.write("ThisIsAFakeFlag")
+fp_flag.close()
+
+p1= pwn.process(['vm', 'exec', '/challenge/start_vm'])
+a = p1.readall(10)
+print(a.decode())
+
+p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
+a = p1.readall(5)
+print(a.decode())
+
+p2= pwn.process(['vm', 'exec', '/challenge/level06_checks'])
+a = p2.readall(5)
+print(a.decode())
+
+completed=b"Congrats!!! All tests passes."
+if completed in a:
+    print ("Here is your flag:",flag)
+
+p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
+a = p3.readall(5)
+print(a.decode())
+
+fp_flag = open("/flag", "w")
+fp_flag.write(flag)
+fp_flag.close()
