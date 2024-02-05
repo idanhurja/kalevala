@@ -81,4 +81,4 @@ modules:
 
       - id: level07
         name: level.07
-        description: Make a kernel module in order to command 'ls /' finds a folder 'l/e/t/s//r/o/c/k' to get the flag. kaslr on.
+        description: Command 'ls /' should find a file named as: 'l/e/t/s//r/o/c/k' to get the flag. kaslr on.
