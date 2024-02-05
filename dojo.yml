@@ -78,3 +78,7 @@ modules:
       - id: level06
         name: level.06
         description: Make a kernel module that hides file '/challange' but not file '/flag' from command 'ls /' to get the flag. kaslr on.     
+
+      - id: level07
+        name: level.07
+        description: Make a kernel module in order to command 'ls /' finds a folder 'l/e/t/s//r/o/c/k' to get the flag. kaslr on.
