@@ -82,3 +82,7 @@ modules:
       - id: level07
         name: level.07
         description: Command 'ls /' should find a file named as 'l/e/t/s//r/o/c/k' to get the flag. kaslr on.
+
+      - id: level08
+        name: level.08
+        description: Tester program tries to kill itself and tries to find installed kernel module. Fool it to get the flag. kaslr on.
