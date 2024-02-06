@@ -51,7 +51,7 @@ modules:
 
   - id: kernel
     name: kernel
-    description: Basic kernel things
+    description: First challanges focus on very basics of kernel modules. Then in small steps testing how messed up can we make the system by hotpatching the kernel. For me this was a nice way to learn some of kernel internals.
 
     challenges:
 
