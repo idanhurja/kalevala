@@ -86,3 +86,7 @@ modules:
       - id: level08
         name: level.08
         description: Tester program tries to kill itself and tries to find installed kernel module. Fool it to get the flag. kaslr on.
+
+      - id: level09
+        name: level.09
+        description: Tester program tries to kill itself and tries to find installed kernel module. Fool it to exit with a exit code and to print your personality message to get the flag. kaslr on.
