@@ -29,6 +29,9 @@ a = p1.readall(5)
 print(a.decode())
 
 p2= pwn.process(['vm', 'exec', '/challenge/level09_checks'])
+a = p2.readuntil("Calling kill for this process..")
+print(a.decode())
+
 a2 = p2.readall(5)
 print(a2.decode())
 exit_code=p2.poll(True)
@@ -38,7 +41,7 @@ part1_done=b"No modules found"
 part2_done=b"!!! LET'S ROLL !!!!"
 
 if exit_code == 66:
-    if part1_done in a2:
+    if part1_done in a:
         if part2_done in a2:
             print ("All check passed, here is your flag:",flag)
         else:
