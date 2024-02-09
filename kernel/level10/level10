@@ -47,6 +47,9 @@ if b >39:
   p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
   a = p3.readall(5)
   print(a.decode())
+  fp_flag = open("/flag", "w")
+  fp_flag.write(flag)
+  fp_flag.close()
   exit()
 
 p2= pwn.process(['vm', 'exec', '/challenge/level10_checks'])
