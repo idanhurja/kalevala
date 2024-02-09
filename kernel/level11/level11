@@ -1,0 +1,93 @@
+#!/opt/pwn.college/python
+
+import sys
+import pwn
+import os
+from pwn import *
+
+pwn.context.arch = "amd64"
+pwn.context.encoding = "ascii"
+
+import random
+import string
+
+if len(sys.argv) > 1:
+  name = sys.argv[1]
+else:
+  print("syntax: /challenge/level11 [name_of_binary_to_be_executed]")
+  exit()
+
+print ("This is a tester program that will check that the .ko module you provided is performing as expected.")
+print ("If all test cases are passed, the flag will be printed. Flag may be accidentially printed also in case of some bug in this tester program.")
+print ("It is expected that the .ko module is named as kalevala.ko and it is located in the directory /home/hacker")
+print ("Tester program is slowish, some delay is added between each step to quarantee more realiable behaviour.")
+
+
+
+
+fp_flag = open("/flag", "r")
+flag = fp_flag.read(100)
+fp_flag.close()
+
+length = 30
+characters = string.ascii_letters + string.digits
+generated_string = ''.join(random.choice(characters) for _ in range(length))
+
+
+fp_flag = open("/flag", "w")
+fp_flag.write(generated_string)
+fp_flag.close()
+
+p1= pwn.process(['vm', 'exec', '/challenge/start_vm'])
+a = p1.readall(10)
+print(a.decode())
+
+p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
+a = p1.readall(5)
+print(a.decode())
+
+p1= pwn.process(['vm', 'exec', 'lsmod'])
+a = p1.readall(5)
+print(a.decode())
+
+b = len(a)
+
+if b >39:
+  print (".ko module found. No flag.")
+  p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
+  a = p3.readall(5)
+  print(a.decode())
+  fp_flag = open("/flag", "w")
+  fp_flag.write(flag)
+  fp_flag.close()
+  exit()
+
+p2= pwn.process(['vm', 'exec', f'{name}'])
+a2 = p2.readall(5)
+print(a2.decode())
+
+done =0
+part2_done=b"!!! LET'S ROLL !!!!"
+if generated_string.encode('utf-8') in a2:
+    if part2_done in a2:
+        print ("wow, you pwned the binary!")
+        done=1
+    else:
+        print ("Show your personality this time in stdout. No flag.")
+else:
+    print ("stdout not as expected. No flag.")
+print ("")
+
+p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
+a = p3.readall(5)
+print(a.decode())
+part3_failed=b"ERROR"
+if part3_failed in a:
+  print ("Proper solution is not generating errors. Hacker should be able to remove things that they dont want to be seen by others. No flag.")
+else:
+  if done ==1:
+    print ("All check passed, here is your flag:",flag)
+
+fp_flag = open("/flag", "w")
+fp_flag.write(flag)
+fp_flag.close()
