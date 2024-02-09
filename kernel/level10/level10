@@ -36,24 +36,39 @@ p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
 a = p1.readall(5)
 print(a.decode())
 
-p2= pwn.process(['vm', 'exec', '/challenge/level10_checks'])
-a2 = p2.readall(5)
-print(a2.decode())
+p1= pwn.process(['vm', 'exec', 'lsmod'])
+a = p1.readall(5)
+print(a.decode())
+
+b = len(a)
+
+if b <39:
+  p2= pwn.process(['vm', 'exec', '/challenge/level10_checks'])
+  a2 = p2.readall(5)
+  print(a2.decode())
 
 
-part2_done=b"!!! LET'S ROLL !!!!"
-if generated_string.encode('utf-8') in a2:
-    if part2_done in a2:
-        print ("All check passed, here is your flag:",flag)
-    else:
-        print ("Show your personality this time in stdout. No flag.")
+  part2_done=b"!!! LET'S ROLL !!!!"
+  if generated_string.encode('utf-8') in a2:
+      if part2_done in a2:
+          print ("wow, you pwned the binary!")
+      else:
+          print ("Show your personality this time in stdout. No flag.")
+  else:
+      print ("stdout not as expected. No flag.")
+  print ("")
+
 else:
-    print ("stdout not as expected. No flag.")
-print ("")
+    print (".ko module found. No flag.")
 
 p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
 a = p3.readall(5)
 print(a.decode())
+part3_failed=b"ERROR"
+if part3_failed in a:
+  print ("Proper solution is not generating errors. Hacker should be able to remove things that they dont want to be seen by others. No flag.")
+else:
+  print ("All check passed, here is your flag:",flag)
 
 fp_flag = open("/flag", "w")
 fp_flag.write(flag)
