@@ -42,24 +42,26 @@ print(a.decode())
 
 b = len(a)
 
-if b <39:
-  p2= pwn.process(['vm', 'exec', '/challenge/level10_checks'])
-  a2 = p2.readall(5)
-  print(a2.decode())
+if b >39:
+  print (".ko module found. No flag.")
+  p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
+  a = p3.readall(5)
+  print(a.decode())
+  exit()
 
+p2= pwn.process(['vm', 'exec', '/challenge/level10_checks'])
+a2 = p2.readall(5)
+print(a2.decode())
 
-  part2_done=b"!!! LET'S ROLL !!!!"
-  if generated_string.encode('utf-8') in a2:
-      if part2_done in a2:
-          print ("wow, you pwned the binary!")
-      else:
-          print ("Show your personality this time in stdout. No flag.")
-  else:
-      print ("stdout not as expected. No flag.")
-  print ("")
-
+part2_done=b"!!! LET'S ROLL !!!!"
+if generated_string.encode('utf-8') in a2:
+    if part2_done in a2:
+        print ("wow, you pwned the binary!")
+    else:
+        print ("Show your personality this time in stdout. No flag.")
 else:
-    print (".ko module found. No flag.")
+    print ("stdout not as expected. No flag.")
+print ("")
 
 p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
 a = p3.readall(5)
