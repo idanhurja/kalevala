@@ -53,6 +53,7 @@ p2= pwn.process(['vm', 'exec', '/challenge/level10_checks'])
 a2 = p2.readall(5)
 print(a2.decode())
 
+done =0
 part2_done=b"!!! LET'S ROLL !!!!"
 if generated_string.encode('utf-8') in a2:
     if part2_done in a2:
@@ -64,7 +65,6 @@ else:
     print ("stdout not as expected. No flag.")
 print ("")
 
-done =0
 p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
 a = p3.readall(5)
 print(a.decode())
