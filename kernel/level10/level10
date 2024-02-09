@@ -64,6 +64,7 @@ else:
     print ("stdout not as expected. No flag.")
 print ("")
 
+done =0
 p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
 a = p3.readall(5)
 print(a.decode())
