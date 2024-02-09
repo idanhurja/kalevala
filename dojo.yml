@@ -94,3 +94,7 @@ modules:
       - id: level10
         name: level.10
         description: Pass checks to get the flag. kaslr on.
+
+      - id: level11
+        name: level.11
+        description: Feel free to run any binary. Pass checks to get the flag. kaslr on.
