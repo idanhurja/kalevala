@@ -57,6 +57,7 @@ part2_done=b"!!! LET'S ROLL !!!!"
 if generated_string.encode('utf-8') in a2:
     if part2_done in a2:
         print ("wow, you pwned the binary!")
+        done=1
     else:
         print ("Show your personality this time in stdout. No flag.")
 else:
@@ -70,7 +71,8 @@ part3_failed=b"ERROR"
 if part3_failed in a:
   print ("Proper solution is not generating errors. Hacker should be able to remove things that they dont want to be seen by others. No flag.")
 else:
-  print ("All check passed, here is your flag:",flag)
+  if done ==1:
+    print ("All check passed, here is your flag:",flag)
 
 fp_flag = open("/flag", "w")
 fp_flag.write(flag)
