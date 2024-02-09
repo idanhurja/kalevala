@@ -69,11 +69,7 @@ modules:
 
       - id: level04
         name: level.04
-        description: Make a kernel module that hides files/folders in directory '/' from command 'ls /' to get the flag. kaslr on.
-
-      - id: level05
-        name: level.05
-        description: Identical to level.04, except new concept introduced for the tester program.       
+        description: Make a kernel module that hides files/folders in directory '/' from command 'ls /' to get the flag. kaslr on.  
 
       - id: level06
         name: level.06
@@ -82,10 +78,6 @@ modules:
       - id: level07
         name: level.07
         description: Command 'ls /' should find a file named as 'l/e/t/s//r/o/c/k' to get the flag. kaslr on.
-
-      - id: level08
-        name: level.08
-        description: Challenge binary tries to kill itself and tries to find installed kernel module. Fool it to get the flag. kaslr on.
 
       - id: level09
         name: level.09
