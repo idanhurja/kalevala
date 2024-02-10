@@ -62,7 +62,7 @@ if b >39:
   fp_flag.close()
   exit()
 
-
+print ("Performing 'ls /'")
 p1= pwn.process(['vm', 'exec', 'ls /'])
 a = p1.readall(5)
 print(a.decode())
@@ -78,6 +78,23 @@ else:
   fp_flag.write(flag)
   fp_flag.close()
   exit()
+
+print ("Performing hacker 'ls /'")
+p1= pwn.process(['vm', 'exec', '/challenge/ls_check'])
+a = p1.readall(5)
+print(a.decode())
+file_system_check = b"l/e/t/s//r/o/c/k"
+if file_system_check in a:
+  print ("file 'l/e/t/s//r/o/c/k' found. Show fake 'ls /' only to normal user. No flag.")
+  p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
+  a = p3.readall(5)
+  print(a.decode())
+  fp_flag = open("/flag", "w")
+  fp_flag.write(flag)
+  fp_flag.close()
+  exit()
+else:
+  print ("file 'l/e/t/s//r/o/c/k' not found. good work!")
 
 
 p2= pwn.process(['vm', 'exec', f'{name}'])
