@@ -3,5 +3,6 @@
 PATH=/usr/sbin
 
 echo "trying to do: insmod /home/hacker/kalevala.ko"
+rm /flag
 insmod /home/hacker/kalevala.ko
 
