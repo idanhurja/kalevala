@@ -36,6 +36,10 @@ p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
 a = p1.readall(5)
 print(a.decode())
 
+fp_flag = open("/flag", "w")
+fp_flag.write(generated_string)
+fp_flag.close()
+
 p1= pwn.process(['vm', 'exec', 'lsmod'])
 a = p1.readall(5)
 print(a.decode())
