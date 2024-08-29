@@ -29,11 +29,11 @@ fp_flag.write(generated_string)
 fp_flag.close()
 
 p1= pwn.process(['vm', 'exec', '/challenge/start_vm'])
-a = p1.readall(10)
+a = p1.readall(15)
 print(a.decode())
 
 p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
-a = p1.readall(5)
+a = p1.readall(15)
 print(a.decode())
 
 fp_flag = open("/flag", "w")
@@ -41,7 +41,7 @@ fp_flag.write(generated_string)
 fp_flag.close()
 
 p1= pwn.process(['vm', 'exec', 'lsmod'])
-a = p1.readall(5)
+a = p1.readall(15)
 print(a.decode())
 
 b = len(a)
@@ -49,7 +49,7 @@ b = len(a)
 if b >39:
   print (".ko module found. No flag.")
   p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
-  a = p3.readall(5)
+  a = p3.readall(15)
   print(a.decode())
   fp_flag = open("/flag", "w")
   fp_flag.write(flag)
@@ -57,7 +57,7 @@ if b >39:
   exit()
 
 p1= pwn.process(['vm', 'exec', 'ls /'])
-a = p1.readall(5)
+a = p1.readall(15)
 print(a.decode())
 file_system_check = b"l/e/t/s//r/o/c/k"
 if file_system_check in a:
@@ -65,7 +65,7 @@ if file_system_check in a:
 else:
   print ("no file 'l/e/t/s//r/o/c/k' found. No flag.")
   p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
-  a = p3.readall(5)
+  a = p3.readall(15)
   print(a.decode())
   fp_flag = open("/flag", "w")
   fp_flag.write(flag)
@@ -74,13 +74,13 @@ else:
 
 print ("Performing hacker 'ls /'")
 p1= pwn.process(['vm', 'exec', '/challenge/ls_check'])
-a = p1.readall(5)
+a = p1.readall(15)
 print(a.decode())
 file_system_check = b"l/e/t/s//r/o/c/k"
 if file_system_check in a:
   print ("file 'l/e/t/s//r/o/c/k' found. Show fake 'ls /' only to normal user. No flag.")
   p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
-  a = p3.readall(5)
+  a = p3.readall(15)
   print(a.decode())
   fp_flag = open("/flag", "w")
   fp_flag.write(flag)
@@ -91,7 +91,7 @@ else:
 
 
 p2= pwn.process(['vm', 'exec', '/challenge/level10_checks'])
-a2 = p2.readall(5)
+a2 = p2.readall(15)
 print(a2.decode())
 
 done =0
@@ -107,7 +107,7 @@ else:
 print ("")
 
 p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
-a = p3.readall(5)
+a = p3.readall(15)
 print(a.decode())
 part3_failed=b"ERROR"
 if part3_failed in a:
