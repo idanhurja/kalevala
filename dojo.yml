@@ -93,4 +93,4 @@ modules:
 
       - id: level12
         name: level.12
-        description: As #11 but now some too simply non intended solutions should not be possible.
+        description: As level11 but now some too simply non intended solutions should not be possible.
