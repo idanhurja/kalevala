@@ -1,0 +1,57 @@
+#!/opt/pwn.college/python
+
+import argparse
+import ctypes
+import grp
+import os
+import shutil
+import socket
+import subprocess
+import sys
+import tempfile
+import textwrap
+import time
+from pwn import *
+import pwn
+
+
+libc = ctypes.CDLL("libc.so.6")
+
+
+def error(msg):
+    print(msg, file=sys.stderr)
+    exit(1)
+
+
+def build(path):
+
+    with open(path, "r") as f:
+        src = f.read()
+
+    with tempfile.TemporaryDirectory() as workdir:
+        with open(f"{workdir}/kalevala.c", "w") as f:
+            f.write(src)
+
+        with open(f"{workdir}/Makefile", "w") as f:
+            f.write(
+                textwrap.dedent(
+                    f"""
+                    obj-m += kalevala.o
+
+                    all:
+                    \tmake -C /opt/linux/linux-5.4 M={workdir} modules
+                    clean:
+                    \tmake -C /opt/linux/linux-5.4 M={workdir} clean
+                    """
+                )
+            )
+        subprocess.run(["make", "-C", workdir], stdout=sys.stderr, check=True)
+
+        shutil.copy(f"{workdir}/kalevala.ko", "/home/hacker/kalevala.ko")
+
+
+def main():
+    build("/home/hacker/kalevala.c")
+
+if __name__ == '__main__':
+    main()
