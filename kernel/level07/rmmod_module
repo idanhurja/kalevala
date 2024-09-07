@@ -3,4 +3,5 @@
 PATH=/usr/sbin
 
 echo "trying to do: rmmod kalevala"
+/bin/rm /flag
 rmmod kalevala

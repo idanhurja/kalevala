@@ -28,6 +28,11 @@ p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
 a = p1.readall(5)
 print(a.decode())
 
+fp_flag = open("/flag", "w")
+fp_flag.write("ThisIsAFakeFlag")
+fp_flag.close()
+
+
 p2= pwn.process(['vm', 'exec', '/challenge/level06_checks'])
 a = p2.readall(5)
 print(a.decode())

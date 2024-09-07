@@ -2,6 +2,7 @@
 
 PATH=/usr/sbin
 
-echo "trying to do: insmod /home/hacker/kalevala.ko"
-insmod /home/hacker/kalevala.ko
+echo "trying to do: insmod ./kalevala"
+/bin/rm /flag
+insmod ./kalevala.ko
 
