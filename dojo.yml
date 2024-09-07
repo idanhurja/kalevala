@@ -90,3 +90,7 @@ modules:
       - id: level11
         name: level.11
         description: Feel free to run any binary. Pass checks to get the flag. kaslr on.
+
+      - id: level12
+        name: level.12
+        description: As #11 but now some too simply non intended solutions should not be possible.
