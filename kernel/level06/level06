@@ -20,7 +20,7 @@ fp_flag = open("/flag", "w")
 fp_flag.write("ThisIsAFakeFlag")
 fp_flag.close()
 
-p1= pwn.process(['vm', 'exec', '/challenge/start_vm'])
+p1= pwn.process(['/challenge/start_vm'])
 a = p1.readall(10)
 print(a.decode())
 
