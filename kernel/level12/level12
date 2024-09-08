@@ -14,7 +14,7 @@ import string
 if len(sys.argv) > 1:
   name = sys.argv[1]
 else:
-  print("syntax: /challenge/level11 [name_of_binary_to_be_executed]")
+  print("syntax: /challenge/level2 [name_of_binary_to_be_executed]")
   exit()
 
 print ("This is a tester program that will check that the .ko module you provided is performing as expected.")
