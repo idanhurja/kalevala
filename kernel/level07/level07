@@ -21,11 +21,11 @@ fp_flag.write("ThisIsAFakeFlag")
 fp_flag.close()
 
 p1= pwn.process(['/challenge/start_vm'])
-a = p1.readall(10)
+a = p1.readall(15)
 print(a.decode())
 
 p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
-a = p1.readall(5)
+a = p1.readall(15)
 print(a.decode())
 
 fp_flag = open("/flag", "w")
@@ -33,7 +33,7 @@ fp_flag.write("ThisIsAFakeFlag")
 fp_flag.close()
 
 p2= pwn.process(['vm', 'exec', '/challenge/level07_checks'])
-a = p2.readall(5)
+a = p2.readall(15)
 print(a.decode())
 
 completed=b"Congrats!!! All tests passes."
@@ -41,7 +41,7 @@ if completed in a:
     print ("Here is your flag:",flag)
 
 p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
-a = p3.readall(5)
+a = p3.readall(15)
 print(a.decode())
 
 fp_flag = open("/flag", "w")
