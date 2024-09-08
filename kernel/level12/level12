@@ -40,7 +40,7 @@ fp_flag = open("/flag", "w")
 fp_flag.write(generated_string)
 fp_flag.close()
 
-p1= pwn.process(['vm start'])
+p1= pwn.process(['/challenge/start_vm'])
 a = p1.readall(15)
 print(a.decode())
 
