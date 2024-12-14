@@ -51,7 +51,7 @@ modules:
 
   - id: kernel
     name: kernel
-    description: First challanges focus on very basics of kernel modules. Then in small steps testing how messed up can we make the system by hotpatching the kernel. For me this was a nice way to learn some of kernel internals. *Update 14.12.2024. Today I noticed that intended solution no longer able to be used to get the flag. Something in pwn.college infra updated to counter intended solution for this challenge. To quarantee superios hacker experience an additional script added to this challange to grant you the flag if you have performed intended solution. Intended solution functioned when I last time checked it some months ago.
+    description: First challanges focus on very basics of kernel modules. Then in small steps testing how messed up can we make the system by hotpatching the kernel. For me this was a nice way to learn some of kernel internals. Update 14.12.2024. Today I noticed that intended solution no longer able to be used to get the flag. Something in pwn.college infra updated to counter intended solution for this challenge. To quarantee superios hacker experience an additional script added to this challange to grant you the flag if you have performed intended solution. Intended solution functioned when I last time checked it some months ago.
 
     challenges:
 
