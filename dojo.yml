@@ -47,7 +47,7 @@ modules:
         
       - id: idan23
         name: idan23.04
-        description: The Idan23-interpreted language boss challenge. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all. //Update 14.12.2024. Today I noticed that intended solution no longer able to be used to get the flag. Something in pwn.college infra updated to counter intended solution for this challenge. To quarantee superios hacker experience an additional script added to this challange to grant you the flag if you have performed intended solution. Intended solution functioned when I last time checked it some months ago.
+        description: The Idan23-interpreted language boss challenge. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all. //Update 14.12.2024. Today I noticed that the intended solution for this challenge is no longer able to be used to get the flag. Something in pwn.college infra updated to counter the intended solution of this challenge. To quarantee superior hacker experience (or well the flag mainly) an additional script is added to this challange to grant you the flag if you have performed intended solution. Intended solution functioned when I last time checked it some months ago.
 
   - id: kernel
     name: kernel
