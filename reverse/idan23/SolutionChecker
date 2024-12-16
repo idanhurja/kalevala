@@ -1,0 +1,7 @@
+#!/opt/pwn.college/python
+
+from pwd import getpwnam
+
+if __name__ == '__main__':
+    if getpwnam('hacker').pw_uid == 0:
+        print(open('/flag').read())
