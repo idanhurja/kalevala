@@ -1,8 +1,0 @@
-#!/opt/pwn.college/python
-
-import os
-import pwd
-
-if __name__ == '__main__':
-    if pwd.getpwuid(os.stat('/flag').st_uid).pw_name == 'hacker':
-        print(open('/flag').read())
