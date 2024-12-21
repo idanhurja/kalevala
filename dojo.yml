@@ -50,7 +50,7 @@ modules:
         description:  |
           The Idan23-interpreted language boss challenge. Intended solution for this functioned nicely for most of Yan85 challenges as an unintended solution (pwn.college years 21-22 edition). You will lose many fun if use it for them all. 
           
-          Update 14.12.2024. Today I noticed that the intended solution for this challenge is no longer able to be used to get the flag. Something in pwn.college infra updated to counter the intended solution of this challenge. To quarantee superior hacker experience (or well getting of flag mainly) an additional script is added to this challange to grant you the flag if you have performed intended solution. Intended solution functioned when I last time checked it some months ago.
+          Update 14.12.2024. Today I noticed that the intended solution for this challenge is no longer able to be used to get the flag. pwn.college infra has been updated to counter the intended solution of this challenge. To quarantee superior hacker experience (or well getting of flag mainly) an additional script is added to this challange to counter the counter of intended solution of this challenge. Intended solution functioned when I last time checked it some months ago. Added script is also a nice hint for intended approach.
 
   - id: kernel
     name: kernel
