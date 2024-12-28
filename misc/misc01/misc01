@@ -8,11 +8,15 @@ with open('/home/hacker/flag_compare', 'rb') as file:
     file.close()
 
 with open('/flag', 'rb') as file:
-    flag_data = file.read(compare_length)
+    flag_data = file.read()
+    flag_data_compare_length = flag_data[:compare_length] 
     file.close()
     os.remove('/flag')    
 
-if flag_data == flag_compare_data:
+if flag_data_compare_length == flag_compare_data:
     print("ok")
+    if compare_length == 23:
+        print("Enough this fun, here your flag:")
+        print(flag_data.decode())
 else:
     os.remove('/home/hacker/flag_compare')
