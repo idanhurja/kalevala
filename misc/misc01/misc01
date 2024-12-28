@@ -15,7 +15,7 @@ with open('/flag', 'rb') as file:
 
 if flag_data_compare_length == flag_compare_data:
     print("ok")
-    if compare_length == 23:
+    if compare_length == 21:
         print("Enough this fun, here your flag:")
         print(flag_data.decode())
 else:
