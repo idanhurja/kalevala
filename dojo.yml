@@ -97,3 +97,13 @@ modules:
       - id: level12
         name: level.12
         description: As level11 but now some too simply non intended solutions should not be possible.
+
+  - id: misc
+    name: miscellaneous
+    description: Something i wanted to try
+
+    challenges:
+
+      - id: misc01
+        name: misc.01
+        description: practicing scripting of pwn.college challange starting
