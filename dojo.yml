@@ -100,10 +100,10 @@ modules:
 
   - id: misc
     name: miscellaneous
-    description: Something i wanted to try
+    description: Some random stuff i decided to try.
 
     challenges:
 
       - id: misc01
         name: misc.01
-        description: practicing scripting of pwn.college challange starting
+        description: Scripting of pwn.college challange starting. In this challenge target is to brute force /flag byte by byte. After each attempt challenge will rm /flag, so need to restart the challenge. Intended solution is to script this. After first 21 bytes are brute forced, flag will be printed.
