@@ -11,6 +11,14 @@ pwn.context.encoding = "ascii"
 import random
 import string
 
+
+def write_flag(value):
+  fp_flag = open("/flag", "w")
+  fp_flag.write(value)
+  fp_flag.close()
+  os.chmod("/flag", 0o400)
+
+
 if len(sys.argv) > 1:
   name = sys.argv[1]
 else:
@@ -36,9 +44,7 @@ characters = string.ascii_letters + string.digits
 generated_string = ''.join(random.choice(characters) for _ in range(length))
 
 
-fp_flag = open("/flag", "w")
-fp_flag.write(generated_string)
-fp_flag.close()
+write_flag(generated_string)
 
 p1= pwn.process(['/challenge/start_vm'])
 a = p1.readall(15)
@@ -48,9 +54,7 @@ p1= pwn.process(['vm', 'exec', '/challenge/insmod_module'])
 a = p1.readall(15)
 print(a.decode())
 
-fp_flag = open("/flag", "w")
-fp_flag.write(generated_string)
-fp_flag.close()
+write_flag(generated_string)
 
 p1= pwn.process(['vm', 'exec', 'lsmod'])
 a = p1.readall(15)
@@ -63,9 +67,7 @@ if b >39:
   p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
   a = p3.readall(15)
   print(a.decode())
-  fp_flag = open("/flag", "w")
-  fp_flag.write("ThisIsAFakeFlag")
-  fp_flag.close()
+  write_flag("ThisIsAFakeFlag")
   exit()
 
 print ("Performing 'ls /'")
@@ -80,9 +82,7 @@ else:
   p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
   a = p3.readall(15)
   print(a.decode())
-  fp_flag = open("/flag", "w")
-  fp_flag.write("ThisIsAFakeFlag")
-  fp_flag.close()
+  write_flag("ThisIsAFakeFlag")
   exit()
 
 print ("Performing hacker 'ls /'")
@@ -95,9 +95,7 @@ if file_system_check in a:
   p3= pwn.process(['vm', 'exec', '/challenge/rmmod_module'])
   a = p3.readall(15)
   print(a.decode())
-  fp_flag = open("/flag", "w")
-  fp_flag.write("ThisIsAFakeFlag")
-  fp_flag.close()
+  write_flag("ThisIsAFakeFlag")
   exit()
 else:
   print ("file 'l/e/t/s//r/o/c/k' not found. good work!")
@@ -129,6 +127,4 @@ else:
   if done ==1:
     print ("All check passed, here is your flag:",flag)
 
-fp_flag = open("/flag", "w")
-fp_flag.write(flag)
-fp_flag.close()
+write_flag(flag)
