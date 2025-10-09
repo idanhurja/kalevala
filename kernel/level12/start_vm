@@ -1,5 +1,7 @@
-#!/opt/pwn.college/bash
+#!/usr/bin/env -iS /opt/pwn.college/bash
+
+PATH=/usr/sbin
 
 echo "trying to do: start vm"
-vm start
+/opt/pwn.college/vm/vm start
 
