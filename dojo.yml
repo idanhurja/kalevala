@@ -57,7 +57,7 @@ modules:
         description:  |
           The revenge of Idan23-interpreted language boss challenge. 
           
-          One of my fellow hackers for a non-intended solution for Idan23 boss challenge that does not require helper script. Can you find it too?
+          One of my hacker buddies pulled off a slick unintended solve for the Idan23 boss challenge — no lame helper script needed. Can you find it too?
 
   - id: kernel
     name: kernel
