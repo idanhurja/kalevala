@@ -68,7 +68,10 @@ modules:
 
       - id: level03
         name: level.03
-        description: Make a kernel module that hides files/folders in directory '/' from command 'ls /' to get the flag. Some might consider a syscall as an asm instruction that CPU executes on HW-level. But actually its a jump to another world. Sys_call_table is ised there as interface. Lets mess with it some. Unfortunately this is not so trivial in lateer kernel versions but luckily here should be doable.
+        description:  |
+          Make a kernel module that hides files/folders in directory '/' from command 'ls /' to get the flag. 
+                  
+          Some might consider a syscall as an asm instruction that CPU executes on HW-level. But actually its a jump to another world called Kernel. Sys_call_table is used there as interface. Lets mess with it some. Unfortunately this is no longer so trivial in later kernel versions but luckily here should be doable.
 
       - id: level04
         name: level.04
