@@ -52,6 +52,13 @@ modules:
           
           Update 14.12.2024. Today I noticed that the intended solution for this challenge is no longer able to be used to get the flag. pwn.college infra has been updated to counter the intended solution of this challenge. To quarantee superior hacker experience (or well getting of flag mainly) an additional script is added to this challange to counter the counter of intended solution of this challenge. Intended solution functioned when I last time checked it some months ago. Added script is also a nice hint for intended approach.
 
+      - id: idan2305
+        name: idan23.05
+        description:  |
+          The revenge of Idan23-interpreted language boss challenge. 
+          
+          One of my fellow hackers for a non-intended solution for Idan23 boss challenge that does not require helper script. Can you find it too?
+
   - id: kernel
     name: kernel
     description: First challanges focus on very basics of kernel modules. Then in small steps testing how messed up can we make the system by hotpatching the kernel. For me this was a nice way to learn some of kernel internals.
