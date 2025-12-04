@@ -32,6 +32,11 @@ modules:
       - id: guessnumber2
         name: guessnumber.02
         description: a bit more complicated variant of the first one. Still need to enter a correct number but now its not a fixed one, and processing of an user given number seems to take almost as long as delivery of pwn.college belts 🙂
+
+      - id: guessnumber3
+        name: guessnumber.03
+        description: Something different 🙂
+
       
       - id: idan2301
         name: idan23.01
